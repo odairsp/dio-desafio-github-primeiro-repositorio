@@ -1,0 +1,10 @@
+{
+    "html.format.unformatted": "",
+    "intelephense.phpdoc.classTemplate": {
+    
+        "summary": "$1",
+        "tags": [
+            "@package ${1:$SYMBOL_NAMESPACE}"
+        ]
+    }
+}
