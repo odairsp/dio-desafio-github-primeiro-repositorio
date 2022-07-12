@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex-basis</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            padding: 10px;
+        }
+
+        .flex-container {
+            display: flex;
+            border: 1px solid black;
+            max-width: 500px;
+
+        }
+
+        .item {
+            background-color: orangered;
+            margin: 5px;
+            text-align: center;
+            color: white;
+        }
+
+        .flex-basis-auto{
+            flex-basis: auto;
+        }
+        .flex-basis-0{
+            flex-basis: 1;
+        }
+
+        .flex-grow_1{
+            flex-grow: 1;
+        }
+
+        .flex-grow_2{
+            flex-grow: 2;
+        }
+
+        .w100{
+            flex-basis: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>flex-basis-auto flex-grow-1</h2>
+    <div class="flex-container">
+        <div class="item flex-basis-auto flex-grow_1">A</div>
+        <div class="item flex-basis-auto flex-grow_1">BBB</div>
+        <div class="item flex-basis-auto flex-grow_1">C</div>
+        <div class="item flex-basis-auto flex-grow_2">DEF</div>
+    </div>
+    <h2>flex-basis-0 flex-grow-1</h2>
+    <div class="flex-container">
+        <div class="item flex-basis-0 flex-grow_1">AAAAA</div>
+        <div class="item flex-basis-0 flex-grow_1">BBB</div>
+        <div class="item flex-basis-0 flex-grow_1">C</div>
+        <div class="item flex-basis-0 flex-grow_1">DEF</div>
+    </div>
+
+    <h2>flex-basis-100 </h2>
+    <div class="flex-container">
+        <div class="item w100 flex-grow_1">AAAAA</div>
+        <div class="item w100 flex-grow_0">BBB</div>
+        <div class="item w100 flex-grow_0" >C</div>
+        <div class="item w100 flex-grow_1">DEF</div>
+    </div>
+</body>
+
+</html>
