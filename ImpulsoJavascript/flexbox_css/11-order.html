@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - order</title>
+    <style>
+
+        body{
+            background-color: aliceblue;
+            color: black;
+            margin: 10px;
+            padding: 10px;
+        }
+        .flex-container{
+            display: flex;
+            max-width: 350px;
+            border: 2px solid black;
+            background-color: rgb(193, 166, 221);
+            
+        }
+        .item{
+            flex: 1;
+            margin: 5px;
+            outline: 0;
+            border: 1px solid black;
+            background-color: orange;
+            padding: 0;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+        }
+        .order1{
+            order: 1;
+        }
+        .order2{
+            order: 2;
+        }
+        .order3{
+            order: 3;
+        }
+        .order4{
+            order: 4;
+        }
+        .order5{
+            order: 5;
+        }
+        .direction{
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Row</h1>
+    <h2>Order = 0</h2>
+    <div class="flex-container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+    <h2>Order = mix</h2>
+    <div class="flex-container">
+        <div class="item order5">A</div>
+        <div class="item order4">B</div>
+        <div class="item order3">C</div>
+        <div class="item order2">D</div>
+        <div class="item order1">E</div>
+    </div>
+    <h1>Column</h1>
+    <h2>Order = 0</h2>
+    <div class="flex-container direction">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+    </div>
+    <h2>Order = mix</h2>
+    <div class="flex-container direction">
+        <div class="item order5">A</div>
+        <div class="item order4">B</div>
+        <div class="item order3">C</div>
+        <div class="item order2">D</div>
+        <div class="item order1">E</div>
+    </div>
+</body>
+</html>
