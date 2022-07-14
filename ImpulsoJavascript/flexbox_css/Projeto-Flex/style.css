@@ -24,6 +24,8 @@ div img {
     max-width: 992px;
     margin: auto;
     width: 100%;
+    min-width: 320px;
+
 }
 
 header {
@@ -61,7 +63,7 @@ header .list-items {
 
 .texto-apresentacao {
     min-width: 200px;
-    width: 100%;
+
 
 
 }
@@ -183,20 +185,21 @@ header .list-items {
 }
 
 #planos {
-    width: 100vh;
     flex-direction: column;
-    min-height: 70vh;
+    min-height: 100vh;
     padding-top: 50px;
 }
-#planos h2{
+
+#planos h2 {
     font-size: 32px;
+    margin-bottom: 20px;
 }
 
 .list-planos {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    
+
 }
 
 .item-planos {
@@ -206,40 +209,36 @@ header .list-items {
     margin-right: 20px;
     padding: 10px;
     max-width: 240px;
-   
 
-   
+
+
 }
 
-.item-planos .btn{
+.item-planos .btn {
     margin: auto;
-    height: 40px;
-    width: 150px;
-    line-height: 40px;
     margin-bottom: 20px;
-    
-    
+
+
 }
 
-.item-planos h3{
+.item-planos h3 {
     display: flex;
     font-size: 24px;
-    color: #122A57;
     flex-direction: column;
     text-align: center;
     margin-top: 20px;
 }
 
-.item-planos h3::after{
+.item-planos h3::after {
     content: "";
     background-color: #122A57;
     width: 100%;
     height: 2px;
     margin: 20px 0;
-    
+
 }
 
-.item-planos ul{
+.item-planos ul {
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
@@ -247,14 +246,15 @@ header .list-items {
 
 }
 
-.item-planos ul li{
+.item-planos ul li {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     margin-bottom: 5px;
 
 }
 
-.item-planos ul li::before{
+.item-planos ul li::before {
     content: "";
     width: 10px;
     height: 10px;
@@ -263,17 +263,18 @@ header .list-items {
     margin-right: 10px;
 }
 
-#plan3{
+/* #plan3 {
     height: 50%vh;
-}
+} */
 
-footer{
+footer {
     background-color: #122A57;
     height: 70px;
     display: flex;
     align-items: center;
 }
-.footer{
+
+.footer {
     justify-content: space-between;
     color: #fff;
 }
@@ -281,7 +282,55 @@ footer{
 /* mobile */
 
 @media (max-width: 992px) {
-    .flex-container{
+    .flex-container {
         flex-direction: column;
+        margin: 10px 10px;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+
+    }
+
+    .texto-apresentacao {
+        width: 100%;
+    }
+
+    #quem-somos {
+        flex-direction: column-reverse;
+    }
+
+    #quem-somos img {
+        min-width: 320px;
+        margin: auto;
+    }
+
+    .list-servicos {
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    .item-servico img {
+        width: 50%;
+        margin: auto;
+    }
+
+    #planos{
+        align-items: center;
+    }
+    .list-planos {
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+
+
+    }
+
+    .item-planos {
+        max-width: 90%;
+        margin: 10px 10px;
+        width: 100%;
+
     }
 }
