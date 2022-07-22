@@ -1,0 +1,1 @@
+alert("Linkar externo o script!")
