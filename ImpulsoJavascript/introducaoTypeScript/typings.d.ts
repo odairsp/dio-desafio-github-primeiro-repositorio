@@ -1,1 +1,4 @@
 
+interface JQuery {
+   novaFuncao(): void;
+}

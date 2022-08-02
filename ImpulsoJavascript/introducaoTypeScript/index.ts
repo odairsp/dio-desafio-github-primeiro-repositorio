@@ -1,12 +1,12 @@
 import $ from 'jquery';
-
+ 
 $.fn.extend({
     novaFuncao() {
         console.log('Chamou função!');
     }
 });
-
-
+ 
+$('body').novaFuncao();
 
 const input = document.getElementById('input') as HTMLInputElement;
 
@@ -41,6 +41,7 @@ function redirecione1(usuario: IUsuario | IAdmin){
         // redirecionar para administração
         
     // redirecionar para area do usuario
+}
 }
 
 
