@@ -1,26 +1,53 @@
-console.log("Estou vinculado ao index.HTML");
+const pessoa = {
+    nome: 'Mariana',
+    idade: 20,
+    profissao: 'Desenvolvedora',
+}
 
-let botao = document.getElementById('button');
-let input1 = document.getElementById('input1') as HTMLInputElement;
-let input2 = document.getElementById('input2') as HTMLInputElement;
+pessoa.idade = 30;
 
 
-function somar(num1: number, num2: number, devePrintar: boolean, frase: string) {
-    if(devePrintar){
-        console.log(frase+(num1+num2));
+const andre: {nome: string, idade: number, profissao: string} = {
+    nome: 'Andre',
+    idade: 24,
+    profissao: 'Programador'
+
+}
+enum Profissao {
+    'Professora',
+    'Atriz',
+    'Desenvolvedora',
+    'JogadoraDeFutebol',
+}
+
+interface Pessoa {
+    nome: string;
+    idade: number;
+    profissao?: Profissao;
+}
+
+const vanessa: Pessoa = {
+    nome: 'Vanessa',
+    idade: 26,
+    profissao: Profissao.Desenvolvedora,
+}
+
+interface Estudante extends Pessoa {
+    materias: string[]
+}
+
+
+const Jessica: Estudante = {
+    nome: 'Jessica',
+    idade: 36,
+    profissao: Profissao.Desenvolvedora,
+    materias: ['Matematica', 'Programação', 'Portugues', 'Java']
+}
+
+function listar (lista: string[]){
+    for (const item of lista) {
+        console.log('- ',item);
     }
-    return num1 + num2;
 }
 
-
-let devePrintar = true;
-let frase = "O valor é: "
-
-if(botao){
-    botao.addEventListener('click', () => {
-        if(input1 && input2){
-            console.log(somar(Number(input1.value), Number(input2.value), devePrintar, frase));
-        }
-        
-    })
-}
+listar(Jessica.materias)
