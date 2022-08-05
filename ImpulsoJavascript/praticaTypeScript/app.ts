@@ -1,53 +1,15 @@
-const pessoa = {
-    nome: 'Mariana',
-    idade: 20,
-    profissao: 'Desenvolvedora',
+function somarValoresNum(input1: number, input2: number): number {
+        return input1 + input2;
 }
 
-pessoa.idade = 30;
-
-
-const andre: {nome: string, idade: number, profissao: string} = {
-    nome: 'Andre',
-    idade: 24,
-    profissao: 'Programador'
-
-}
-enum Profissao {
-    'Professora',
-    'Atriz',
-    'Desenvolvedora',
-    'JogadoraDeFutebol',
+function somarValoresNumericos2(numero1: number, numero2: number, 
+    callback: (numero: number) => number): number{
+    let resultado = (numero1 + numero2);
+    return callback(resultado);
 }
 
-interface Pessoa {
-    nome: string;
-    idade: number;
-    profissao?: Profissao;
+function aoQuadrado(numero: number): number {
+    return numero * numero
 }
 
-const vanessa: Pessoa = {
-    nome: 'Vanessa',
-    idade: 26,
-    profissao: Profissao.Desenvolvedora,
-}
-
-interface Estudante extends Pessoa {
-    materias: string[]
-}
-
-
-const Jessica: Estudante = {
-    nome: 'Jessica',
-    idade: 36,
-    profissao: Profissao.Desenvolvedora,
-    materias: ['Matematica', 'Programação', 'Portugues', 'Java']
-}
-
-function listar (lista: string[]){
-    for (const item of lista) {
-        console.log('- ',item);
-    }
-}
-
-listar(Jessica.materias)
+console.log(somarValoresNumericos2(1,3,aoQuadrado));
